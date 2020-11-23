@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 2.0//EN" "http://www.w3.org/2001/SMIL20/SMIL20.dtd">
+<smil xmlns="http://www.w3.org/2001/SMIL20/Language">
+	<head>
+	</head>
+	<body>
+		<img src="image.jpeg" alt="Image"/>
+		<video src="meuVideo.mp4" />
+	</body>
+</smil>
