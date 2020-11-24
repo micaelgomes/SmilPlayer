@@ -10,20 +10,16 @@ const Grid = () => {
 
   return (
     <>
-      <div className="fluid-container">
-        <div className="row m-0 grid-style">
-
-          {arrContentMedia.map((mediaByType) => (
-            mediaByType.map((media, i) => (
-              <Canva
-                key={i}
-                typeMedia={media.name}
-                srcMedia={media.attributes.src}
-                altMedia={media.attributes.alt}
-                duration={media.attributes.dur} />
-            ))
-          ))}
-        </div>
+      <div className="m-0 grid-style">
+        {arrContentMedia.map((media, i) => (
+          <Canva
+            key={i}
+            nameMedia={media.name}
+            srcMedia={media.attributes.src}
+            altMedia={media.attributes.alt}
+            duration={media.attributes.dur}
+            kids={media.kids} />
+        ))}
       </div>
     </>
   )

@@ -83,6 +83,16 @@ pre {
   background-color: #000000;
 }
 
+.seq {
+  position: relative;
+}
+
+.seq video, .seq img {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+
 @keyframes hiddenAfter {
   to {
       width:0;

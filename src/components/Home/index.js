@@ -11,9 +11,9 @@ const Home = () => {
   </head>
   <body>
     <img src="dart.jpeg" alt="Dart pai" dur="10s"/>
-    <img src="leia.jpeg" alt="Leia sorrindo"/>
-    <img src="luke.jpeg" alt="Luke bolado"/>
-    <video src="video.mp4" />
+    <img src="leia.jpeg" alt="Leia sorrindo" dur="7s"/>
+    <img src="luke.jpeg" alt="Luke bolado" dur="5s"/>
+    <video src="video.mp4" dur="2s"/>
   </body>
 </smil>`);
 
