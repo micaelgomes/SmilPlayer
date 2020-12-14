@@ -12,8 +12,10 @@ const Home = () => {
   <body>
     <img src="dart.jpeg" alt="Dart pai" dur="10s"/>
     <img src="leia.jpeg" alt="Leia sorrindo" dur="7s"/>
-    <img src="luke.jpeg" alt="Luke bolado" dur="5s"/>
-    <video src="video.mp4" dur="2s"/>
+    <par>
+      <img src="luke.jpeg" alt="Luke bolado" dur="5s"/>
+      <video src="video.mp4" dur="2s"/>
+    </par>
   </body>
 </smil>`);
 
@@ -31,7 +33,7 @@ const Home = () => {
         <div className="m-auto text-center">
           <img src={'logo.png'} alt="logo path" />
           <h1 className="title">teste e aprenda Smil na Web.</h1>
-          <p className="sub-title">Synchronized Multimedia Integration Language (SMIL) 1.0 -- Use our free, collaborative, in-browser IDE to code in 50+ languages , *b* , without spending a second on setup.</p>
+          <p className="sub-title">Synchronized Multimedia Integration Language (SMIL) 1.0 -- Use our free, collaborative, in-browser IDE to code in 1 languages , *b* , without spending a second on setup.</p>
 
           <form action="/grid" className="playground-area">
             <textarea

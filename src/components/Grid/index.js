@@ -18,6 +18,8 @@ const Grid = () => {
             srcMedia={media.attributes.src}
             altMedia={media.attributes.alt}
             duration={media.attributes.dur}
+            begin={media.attributes.begin}
+            repeatCount={media.attributes.repeatCount}
             kids={media.kids} />
         ))}
       </div>

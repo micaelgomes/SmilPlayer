@@ -1,13 +1,17 @@
 import React from 'react';
 
-const renderElement = (nameMedia, srcMedia, altMedia, duration, kids) => {
+const renderElement = (nameMedia, srcMedia, altMedia, duration, begin, repeatCount, kids) => {
+  const styles = {
+    animation: duration ? `hiddenAfter 0s ease-in ${duration} forwards` : "none", border: '3px solid #FF5681',
+  }
+
   switch (nameMedia) {
     case 'img':
       return (
         <div className="col-4 p-0 m-0">
           <img
             className={`image-grid`}
-            style={{ animation: duration ? `hiddenAfter 0s ease-in ${duration} forwards` : "none", border: '3px solid #FF5681' }}
+            style={styles}
             src={'assets/' + srcMedia}
             alt={altMedia} />
         </div>
@@ -18,7 +22,7 @@ const renderElement = (nameMedia, srcMedia, altMedia, duration, kids) => {
         <div className="col-4 p-0 m-0">
           <video
             className="video-grid"
-            style={{ animation: duration ? `hiddenAfter 0s ease-in ${duration} forwards` : "none", border: '3px solid #5681FF' }}
+            style={styles}
             autoPlay
           >
             <source src={'assets/' + srcMedia} type="video/mp4" />
@@ -110,11 +114,11 @@ const renderElement = (nameMedia, srcMedia, altMedia, duration, kids) => {
   }
 }
 
-const Canva = ({ nameMedia, srcMedia, altMedia, duration, kids }) => {
-
+const Canva = ({ nameMedia, srcMedia, altMedia, duration, begin, repeatCount, kids }) => {
+ 
   return (
     <>
-      {renderElement(nameMedia, srcMedia, altMedia, duration, kids)}
+      {renderElement(nameMedia, srcMedia, altMedia, duration, begin, repeatCount, kids)}
     </>
   )
 }
