@@ -1,8 +1,20 @@
 import React from 'react';
 
 const renderElement = (nameMedia, srcMedia, altMedia, duration, begin, repeatCount, kids) => {
+  const valueDuration = duration ? parseInt(duration.substring(0, duration.length-1)): null;
+  const valueBegin = begin ? parseInt(begin.substring(0, begin.length-1)): null;
+  const valueRepeat = parseInt(repeatCount);
+
+  let dur = valueRepeat ? (valueRepeat*valueDuration) : valueDuration;
+  
+  if(begin) {
+    dur += valueBegin;
+  } 
+
+  dur += 's';
+
   const styles = {
-    animation: duration ? `hiddenAfter 0s ease-in ${duration} forwards` : "none", border: '3px solid #FF5681',
+    animation: duration ? `hiddenAfter 0s ease-in ${dur} forwards` : "none", border: '3px solid #FF5681',
   }
 
   switch (nameMedia) {
@@ -44,6 +56,8 @@ const renderElement = (nameMedia, srcMedia, altMedia, duration, begin, repeatCou
                   srcMedia={media.attributes.src}
                   altMedia={media.attributes.alt}
                   duration={media.attributes.dur}
+                  begin={media.attributes.begin}
+                  repeatCount={media.attributes.repeatCount}
                   kids={media.kids} />
               )
             })}
@@ -64,6 +78,8 @@ const renderElement = (nameMedia, srcMedia, altMedia, duration, begin, repeatCou
                   srcMedia={media.attributes.src}
                   altMedia={media.attributes.alt}
                   duration={media.attributes.dur}
+                  begin={media.attributes.begin}
+                  repeatCount={media.attributes.repeatCount}
                   kids={media.kids} />
               )
             })}
@@ -83,6 +99,8 @@ const renderElement = (nameMedia, srcMedia, altMedia, duration, begin, repeatCou
                 srcMedia={media.attributes.src}
                 altMedia={media.attributes.alt}
                 duration={media.attributes.dur}
+                begin={media.attributes.begin}
+                repeatCount={media.attributes.repeatCount}
                 kids={media.kids} />
             )
           })}
@@ -101,6 +119,8 @@ const renderElement = (nameMedia, srcMedia, altMedia, duration, begin, repeatCou
                 srcMedia={media.attributes.src}
                 altMedia={media.attributes.alt}
                 duration={media.attributes.dur}
+                begin={media.attributes.begin}
+                repeatCount={media.attributes.repeatCount}
                 kids={media.kids} />
             )
           })}
@@ -115,10 +135,10 @@ const renderElement = (nameMedia, srcMedia, altMedia, duration, begin, repeatCou
 }
 
 const Canva = ({ nameMedia, srcMedia, altMedia, duration, begin, repeatCount, kids }) => {
- 
+
   return (
     <>
-      {renderElement(nameMedia, srcMedia, altMedia, duration, begin, repeatCount, kids)}
+      {renderElement(nameMedia, srcMedia, altMedia, duration, begin, repeatCount, kids )}
     </>
   )
 }
